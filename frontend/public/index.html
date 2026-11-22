@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Monitor</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside><div class="brand">◈ DevOps Monitor</div><p class="nav-label">MONITORING</p><div class="nav active">▦ &nbsp; Overview</div><div class="host"><span class="dot"></span><div><b>Monitored host</b><small>Local machine</small></div></div></aside>
+<main>
+<header><div><p class="eyebrow">INFRASTRUCTURE / OVERVIEW</p><h1>System Overview</h1><p class="muted">Live performance and service health</p></div><div class="right"><span class="pill"><span class="dot"></span><span id="api-status">Connecting</span></span><small id="updated">Waiting for metrics…</small></div></header>
+<section class="banner"><span class="check">✓</span><div><b id="system-status">Connecting to monitoring API</b><p id="system-message">Fetching latest system metrics.</p></div><strong id="status-tag">CHECKING</strong></section>
+<section class="metrics">
+<article class="card"><div class="card-title">CPU UTILIZATION <span>⌁</span></div><div class="value"><strong id="cpu-value">--</strong>%</div><div class="track"><i id="cpu-bar" class="cyan"></i></div><small id="cpu-cores">-- logical cores</small></article>
+<article class="card"><div class="card-title">MEMORY USAGE <span>▤</span></div><div class="value"><strong id="memory-value">--</strong>%</div><div class="track"><i id="memory-bar" class="purple"></i></div><small id="memory-detail">-- / -- MB</small></article>
+<article class="card"><div class="card-title">DISK UTILIZATION <span>▣</span></div><div class="value"><strong id="disk-value">--</strong>%</div><div class="track"><i id="disk-bar" class="orange"></i></div><small id="disk-detail">-- / -- GB</small></article>
+<article class="card"><div class="card-title">BACKEND UPTIME <span>◷</span></div><div class="value uptime"><strong id="uptime-value">--</strong></div><small>Since Flask started</small></article>
+</section>
+<section class="lower">
+<article class="panel"><h2>Network activity</h2><p class="muted">Traffic since backend started</p><div class="network">
+<div><small>↑ UPLOAD RATE</small><b id="upload-rate">-- KB/s</b></div><div><small>↓ DOWNLOAD RATE</small><b id="download-rate">-- KB/s</b></div>
+<div><small>↗ TOTAL SENT</small><b id="sent-total">-- MB</b></div><div><small>↙ TOTAL RECEIVED</small><b id="received-total">-- MB</b></div>
+</div></article>
+<article class="panel"><h2>Service health</h2><p class="muted">Application endpoint checks</p>
+<div class="service"><span id="frontend-indicator" class="indicator"></span><div><b>Express frontend</b><small>Port 3000</small></div><strong id="frontend-health">Checking</strong></div>
+<div class="service"><span id="backend-indicator" class="indicator"></span><div><b>Flask backend</b><small>Port 5000</small></div><strong id="backend-health">Checking</strong></div>
+</article></section>
+<footer>DevOps Monitor · HTML · CSS · JavaScript · Express · Flask · psutil</footer>
+</main></div><script src="app.js"></script></body></html>

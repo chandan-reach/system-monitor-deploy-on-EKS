@@ -1,0 +1,4 @@
+
+Flask==3.1.1
+Flask-Cors==5.0.1
+psutil==7.0.0
